@@ -1,0 +1,21 @@
+GameName = "Dress To Impress" 
+
+tab1name = "Main" 
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))() 
+
+local GameName = Library:NewWindow(GameName) 
+
+local Tab1 = GameName:NewSection(tab1name) 
+
+Tab1:CreateButton("Auto Bunnies", function(value)
+_G.Loop = true
+while _G.Loop and task.wait() do
+game:GetService("ReplicatedStorage").Remotes.TheHunt.onBunnyFound:InvokeServer()
+end
+end) 
+
+Tab1:CreateButton("Talk Mommy Bunny", function(value)
+game.Players.LocalPlayer.Character:PivotTo(CFrame.new(201.650513, 4.68436241, -363.613464, 0.648146689, -6.78395562e-10, -0.761515498, 4.58379068e-09, 1, 3.01054026e-09, 0.761515498, -5.44189938e-09, 0.648146689))
+end)
+local Tab2 = GameName:NewSection("justrinn")
